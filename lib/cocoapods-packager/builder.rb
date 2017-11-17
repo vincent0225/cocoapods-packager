@@ -303,7 +303,7 @@ MAP
     end
 
     def tvos_build_options
-      "ARCHS=\'x86_64 arm64\' OTHER_CFLAGS=\'-fembed-bitcode -Qunused-arguments\'"
+      "ARCHS=\'arm64\' OTHER_CFLAGS=\'-fembed-bitcode -Qunused-arguments\' BITCODE_GENERATION_MODE=bitcode"
     end
 
     def xcodebuild(defines = '', args = '', build_dir = 'build', target = 'Pods-packager', project_root = @static_sandbox_root, config = @config)
